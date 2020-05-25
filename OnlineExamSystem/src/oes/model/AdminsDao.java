@@ -19,7 +19,7 @@ public class AdminsDao {
 		String sql = "select * from admintable where userid=? and password=?";
 		PreparedStatement pst = con.prepareStatement(sql);
 		pst.setString(1, ad.getUsername());
-		pst.setString(2, ad.getUsername());
+		pst.setString(2, ad.getPassowrd());
 		ResultSet rs = pst.executeQuery();
 		if(rs.next())
 		{
